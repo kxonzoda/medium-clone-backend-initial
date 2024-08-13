@@ -3,9 +3,9 @@ from django.db import models
 
 class CustomUser(AbstractUser):
     middle_name = models.CharField(max_length=30, blank=True, null=True)
-
+    
     class Meta:
-        db_table = "users"
+        db_table = "user"
         verbose_name = "User"
         verbose_name_plural = "Users"
         ordering = ["-date_joined"]
@@ -15,8 +15,7 @@ class CustomUser(AbstractUser):
             return self.full_name
         else:
             return self.email or self.username
-
+    
     @property
     def full_name(self):
         return f"{self.last_name} {self.first_name} {self.middle_name}"
-            
