@@ -12,22 +12,22 @@ ALLOWED_HOSTS = []
 
 
 
-# INSTALLED_APPS = [
-#     # Django apps
-#     'django.contrib.admin',
-#     'django.contrib.auth',
-#     'django.contrib.contenttypes',
-#     'django.contrib.sessions',
-#     'django.contrib.messages',
-#     'django.contrib.staticfiles',
+INSTALLED_APPS = [
+    # Django apps
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
 
-#     # Third-party apps
-#     'drf_spectacular',
+    # Third-party apps
+    'drf_spectacular',
 
-#     # Your apps
-#     'users',
-#     # Add other apps here
-# ]
+    # Your apps
+    'users',
+    # Add other apps here
+]
 
 
 
