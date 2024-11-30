@@ -13,15 +13,22 @@ ALLOWED_HOSTS = []
 
 
 # INSTALLED_APPS = [
-#     "django.contrib.admin",
-#     "django.contrib.auth",
-#     "django.contrib.contenttypes",
-#     "django.contrib.sessions",
-#     "django.contrib.messages",
-#     "django.contrib.staticfiles",
-#     'rest_framework',
+#     # Django apps
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+
+#     # Third-party apps
+#     'drf_spectacular',
+
+#     # Your apps
 #     'users',
+#     # Add other apps here
 # ]
+
 
 
 DJANGO_APPS = [
@@ -34,8 +41,9 @@ DJANGO_APPS = [
 ]
 
 EXTERNAL_APPS = [
-    'rest_framework',            # yangi package ni qo'shib olamiz
-    'rest_framework_simplejwt',  # yangi package ni qo'shib olamiz
+    'rest_framework', 
+    'rest_framework_simplejwt',
+    'drf_spectacular',
 ]
 
 LOCAL_APPS = [
@@ -103,13 +111,9 @@ REST_FRAMEWORK = {
     ],
 }
 
-EXTERNAL_APPS = [
-    'drf_spectacular',
-]
-
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',   # drf_spectacular swagger uchun sozlamalar
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',  # drf_spectacular swagger uchun sozlamalar
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',        # swagger orqali authenticate qilishda username va password orqali kirishga ruxsat berish uchun
         'rest_framework_simplejwt.authentication.JWTAuthentication',

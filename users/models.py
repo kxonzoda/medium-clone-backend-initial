@@ -14,6 +14,7 @@ class CustomUser(AbstractUser):
     avatar = models.ImageField(upload_to=file_upload, blank=True)
     avatar = ResizedImageField(size=[300, 300], crop=['top', 'left'], upload_to=file_upload, blank=True)
 
+
     
     class Meta:
         db_table = "user"
